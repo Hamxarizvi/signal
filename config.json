@@ -1,12 +1,7 @@
+
 {
-  "telegram_token": "8133868360:AAFtqEhY82D-dwTb6fYZdYeFPCksKI60XSA",
-  "chat_id": "7550839473",
+  "telegram_token": "YOUR_TELEGRAM_BOT_TOKEN",
+  "chat_id": "YOUR_CHAT_ID",
   "timeframes": ["1m", "5m"],
-  "pairs": ["EUR/USD", "GBP/JPY", "EUR/GBP", "USD/JPY", "OTC_EUR/USD", "OTC_USD/JPY"],
-  "indicators": {
-    "rsi_period": 14,
-    "ema_short": 9,
-    "ema_long": 21
-  },
-  "cooldown_minutes": 2
+  "strategy": "smart"
 }

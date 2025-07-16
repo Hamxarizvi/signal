@@ -1,5 +1,2 @@
-ta
-pandas
+
 requests
-selenium
-beautifulsoup4

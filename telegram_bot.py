@@ -1,16 +1,14 @@
+
 import requests
 import json
 
-with open("config.json") as f:
-    config = json.load(f)
+with open("config.json", "r") as file:
+    config = json.load(file)
 
-def send_signal(pair, tf, direction):
-    msg = f"""
-🔔 SIGNAL ALERT
-Pair: {pair}
-Timeframe: {tf}
-Direction: {"📈 CALL" if direction == "CALL" else "📉 PUT"}
-Reason: RSI + EMA + MACD Confirmed
-"""
+def send_signal(message):
     url = f"https://api.telegram.org/bot{config['telegram_token']}/sendMessage"
-    requests.post(url, json={"chat_id": config['chat_id'], "text": msg})
+    payload = {
+        "chat_id": config["chat_id"],
+        "text": message
+    }
+    requests.post(url, json=payload)
